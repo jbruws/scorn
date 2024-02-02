@@ -1,0 +1,25 @@
+body {
+	font-size: 125%;
+	font-family: sans-serif;
+	color: #0c0c0c;
+	background-color: #eae3e3;
+}
+
+div#contents {
+	display: block;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2rem;
+}
+
+body > hr {
+	width: 70%;
+}
+
+footer {
+	padding: 2rem;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}

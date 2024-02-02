@@ -1,0 +1,46 @@
+body {
+	font-size: 150%;
+	font-family: sans-serif;
+	color: #0c0c0c;
+	background-color: #eae3e3;
+	text-align: center;
+}
+
+header {
+	font-size: 200%;
+	padding: 2rem;
+}
+
+hr {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#posts {
+	display: block;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2rem;
+}
+
+div#posts > ul {
+	display: table;
+	margin: 0 auto;
+}
+
+div#posts > ul > li {
+	margin-bottom: 1rem;
+}
+
+/*body > hr {*/
+	/*width: 70%;*/
+/*}*/
+
+/*footer {*/
+	/*padding: 2rem;*/
+	/*text-align: center;*/
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+/*}*/
