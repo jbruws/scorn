@@ -1,0 +1,27 @@
+---
+# 2+ and single newlines. 2+ newlines are collapsed into two
+'<br><br>': '(\n(\s|\n)+)'
+'<br>': '(\n(\s|\n){2,})'
+
+# headings (<h3> to <h6> are compressed into <h3>)
+'${h_head}<h1>${head_text}</h1>': '(?<h_head>^|<br>)#\ (?<head_text>.+?)(?<h_trail><br>)'
+'${h_head}<h2>${head_text}</h2>': '(?<h_head>^|<br>)##\ (?<head_text>.+?)(?<h_trail><br>)'
+'${h_head}<h3>${head_text}</h3>': '(?<h_head>^|<br>)#{3,6}\ (?<head_text>.+?)(?<h_trail><br>)'
+
+# horizontal rules
+'<br><hr>': '(<br>)(?<hr_block>[\*|_|\-]{3})(<br>)'
+
+# image links
+'<a target="_blank" rel="noopener noreferrer" href="${text}"><img src="${text}"/></a>': '(?<text>https?:\/\/[\w-]*?\.[a-z]{2,}(\/\S*)?(\.png|\.jpg|\.gif|\.jpeg|\.webp))'
+'<a target="_blank" rel="noopener noreferrer" href="${text}"><img src="${text}"/></a>': '(?<text>\.\S[^<>][\/\._a-zA-Z0-9]*(\.png|\.jpg|\.jpeg|\.gif|\.webp))'
+
+# links to external websites
+' <a target="_blank" rel="noopener noreferrer" href="${text}">${text}</a> ': '[^"](?<text>https?:\/\/[\w-]*?\.[a-z]{2,}(\/\S*)?)[^"]'
+
+# misc text formatting
+'<span class="codeblock codesegment">${text}</span>': '\`\`\`(?<text>[^(\`\`\`)]*)\`\`\`<br>'
+'<span class="codeblock">${text}</span>': '\`(?<text>[^\`]*)\`'
+'<span class="bold">${text}</span>': '\*\*(?<text>[^*]*)\*\*'
+'<span class="italic">${text}</span>': '\*(?<text>[^*]*)\*'
+'<span class="strikethrough">${text}</span>': '~~(?<text>[^~]*)~~'
+'<span class="spoiler">${text}</span>': '\|\|(?<text>[^\|]*)\|\|'

@@ -658,6 +658,7 @@ checksum = "824b2ae422412366ba479e8111fd301f7b5faece8149317bb81925979a53f520"
 dependencies = [
  "equivalent",
  "hashbrown",
+ "serde",
 ]
 
 [[package]]
@@ -1052,6 +1053,8 @@ dependencies = [
  "actix-files",
  "actix-web",
  "handlebars",
+ "indexmap",
+ "regex",
  "serde",
  "serde_json",
  "serde_yaml",
