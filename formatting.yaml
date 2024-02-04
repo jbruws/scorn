@@ -12,8 +12,8 @@
 '<br><hr>': '(<br>)(?<hr_block>[\*|_|\-]{3})(<br>)'
 
 # image links
-'<a target="_blank" rel="noopener noreferrer" href="${text}"><img src="${text}"/></a>': '(?<text>https?:\/\/[\w-]*?\.[a-z]{2,}(\/\S*)?(\.png|\.jpg|\.gif|\.jpeg|\.webp))'
-'<a target="_blank" rel="noopener noreferrer" href="${text}"><img src="${text}"/></a>': '(?<text>\.\S[^<>][\/\._a-zA-Z0-9]*(\.png|\.jpg|\.jpeg|\.gif|\.webp))'
+'<a target="_blank" rel="noopener noreferrer" href="${path}"><img src="${path}"/></a>': '(?<text>\[!https?:\/\/[\w-]*?\.(?<path>[a-z]{2,}(\/\S*)?(\.png|\.jpg|\.gif|\.jpeg|\.webp))\])'
+'<a target="_blank" rel="noopener noreferrer" href="${path}"><img src="${path}"/></a>': '(?<text>\[!\.(?<path>[\/\._a-zA-Z0-9]*(\.png|\.jpg|\.jpeg|\.gif|\.webp))\])'
 
 # links to external websites
 ' <a target="_blank" rel="noopener noreferrer" href="${text}">${text}</a> ': '[^"](?<text>https?:\/\/[\w-]*?\.[a-z]{2,}(\/\S*)?)[^"]'
