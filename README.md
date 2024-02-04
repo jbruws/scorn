@@ -12,7 +12,7 @@ The website will be served at `localhost:7117`.
 
 Place Markdown files **(with .md extension!)** in the `./markdown` folder, and they will be automatically converted to HTML, indexed and served on the website.
 
-Basic Markdown formatting (bold/italic text, codeblocks, headings, horizontal rules, etc.) is supported. To embed images, use `[!*text*]`, where `*text*` is either a path to a locally stored image in `./markdown` or a direct link to an image on another site.
+Basic Markdown formatting (bold/italic text, codeblocks, headings, horizontal rules, etc.) is supported. To embed images, use `[!path]`, where `path` is either a path to a locally stored image in `./markdown` or a direct link to an image on another site.
 
 ## License
 
