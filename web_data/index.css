@@ -1,3 +1,24 @@
+@keyframes post_widen {
+	from {
+		margin-right: 0.5rem;
+		margin-left: 0.5rem;
+	}
+	to {
+		margin-right: -2rem;
+		margin-left: -2rem;
+	}
+}
+@keyframes post_shrink {
+	from {
+		margin-right: -2rem;
+		margin-left: -2rem;
+	}
+	to {
+		margin-right: 0.5rem;
+		margin-left: 0.5rem;
+	}
+}
+
 body {
 	font-size: 150%;
 	font-family: sans-serif;
@@ -9,12 +30,20 @@ body {
 header {
 	font-size: 200%;
 	padding: 2rem;
+	font-weight: bold;
 }
 
 hr {
 	width: 50%;
 	margin-left: auto;
+	margin-top: 0;
 	margin-right: auto;
+}
+
+a {
+	display: block;
+	padding: 1rem;
+	text-decoration: none;
 }
 
 div#posts {
@@ -23,24 +52,37 @@ div#posts {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 2rem;
+	padding-top: 0;
 }
 
 div#posts > ul {
-	display: table;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	border-radius: 1rem;
+	padding: 3rem;
 }
 
 div#posts > ul > li {
 	margin-bottom: 1rem;
+	text-align: center;
+	list-style-type: none;
+	background-color: #d8d4d4;
+	border-radius: 1rem;
+	animation-name: post_shrink;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
 }
 
-/*body > hr {*/
-	/*width: 70%;*/
-/*}*/
+div#posts > ul > li:hover {
+	background-color: #c2c1d2;
+	animation-name: post_widen;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
 
-/*footer {*/
-	/*padding: 2rem;*/
-	/*text-align: center;*/
-	/*margin-left: auto;*/
-	/*margin-right: auto;*/
-/*}*/
+div#posts > ul > li > a > h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 115%;
+}

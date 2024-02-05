@@ -1,3 +1,8 @@
+* {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 body {
 	font-size: 125%;
 	font-family: sans-serif;
@@ -18,10 +23,18 @@ body > hr {
 }
 
 footer {
-	padding: 2rem;
 	text-align: center;
+	margin-top: 2rem;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 1rem;
+	width: 70%;
+	border-radius: 1rem;
+	background-color: #d8d4d4;
+}
+
+footer:hover {
+	background-color: #c2c1d2;
 }
 
 img {
@@ -32,20 +45,28 @@ img {
 	margin-top: 2rem;
 }
 
-h1, h2, h3 {
-	font-size: 125%;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+footer > a {
+	text-decoration: none;
+	padding: 2rem;
+	display: block;
+}
+
+h1 {
+	font-size: 150%;
+}
+h2 {
+	font-size: 130%;
+}
+h3 {
+	font-size: 110%;
 }
 
 span.italic {
 	font-style: italic;
 }
-
 span.bold {
 	font-weight: bold;
 }
-
 span.codeblock {
 	border-radius: 0.5rem;
 	background-color: #444444;
@@ -55,7 +76,6 @@ span.codeblock {
 	font-size: 110%;
 	margin-bottom: 6px;
 }
-
 span.codesegment {
 	display: block;
 	width: 80%;
@@ -63,11 +83,9 @@ span.codesegment {
 	margin-right: auto;
 	padding: 0.5rem;
 }
-
 span.quote {
 	color: var(--quote-color);
 }
-
 span.strikethrough {
 	text-decoration: line-through;
 }

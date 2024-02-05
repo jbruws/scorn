@@ -10,7 +10,7 @@ pub async fn index(data: web::Data<AppState<'_>>) -> impl Responder {
         if let Ok(v) = i {
             let filename = v.path().file_name().unwrap().to_str().unwrap().to_string();
             post_list.push_str(&format!(
-                "\t<li><a href=\"/{f}\">{f}</a></li>\n",
+                "\t<li><a href=\"/{f}\"><h3>{f}</h3></a></li>\n",
                 f = filename[..filename.len() - 3].to_string()
             ));
         }
@@ -47,7 +47,7 @@ pub async fn blogpost(data: web::Data<AppState<'_>>, info: web::Path<PathInfo>) 
     HttpResponse::Ok().body(
             data.handle_formatter.render_template(
                 &template_post,
-                &serde_json::json!({"post_title": info.postname_raw, "contents": md_to_html(md_contents.to_string()), "footer": "<a href=\"..\">Back to index</a>".to_string()})
+                &serde_json::json!({"post_title": info.postname_raw, "contents": md_to_html(md_contents.to_string())})
             ).unwrap()
         )
 }
