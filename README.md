@@ -4,7 +4,7 @@ Basic blog engine built for minimal size, ease of use and flexibility.
 
 ## Installation
 
-`git clone https://github.com/jbruws/scorn.git && cd scorn && cargo run`
+`git clone https://github.com/jbruws/scorn.git && cd scorn && mkdir markdown && cargo run`
 
 The website will be served at `localhost:7117`.
 
